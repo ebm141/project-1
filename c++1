@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main ()
+{
+    int month [12];
+    int day [30];
+    
+    for(int i=0; i < 12; i++)
+        month [i] = i+1;
+    
+    for(int i=0; i < 30; i++)
+        day [i] = i+1;
+    
+    cout <<"first month :" << month [0] << endl;
+    cout <<"first day :" << day [0] << endl;
+    
+    
+    return 0;
+}
