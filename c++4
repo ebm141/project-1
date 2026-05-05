@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+double mean(double n1,double n2,double n3,double n4,double n5)
+{
+    return (n1 + n2 + n3 + n4 + n5) / 5.0;
+}
+
+double Sdeviation(double n1,double n2,double n3,double n4,double n5, double av){
+    double numerator;
+    numerator = pow(n1 - av,2) + pow(n2 - av,2) + pow(n3 - av,2) + pow(n4 - av,2) + pow(n5 - av,2);
+    return sqrt(numerator / 5.0);
+}
+
+int main()
+{
+    double num1,num2,num3,num4,num5,avg,sdv;
+    
+    cout <<"enter five numbers : \n";
+    cin >> num1 >> num2 >> num3 >> num4 >> num5;
+    
+    avg = mean(num1,num2,num3,num4,num5);
+    sdv = Sdeviation(num1,num2,num3,num4,num5,avg);
+    
+    cout <<"\n mean:" << avg;
+    cout <<"\n standard devition: " << sdv << endl;
+    
+    return 0;
+}
+
